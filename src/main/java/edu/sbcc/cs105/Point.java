@@ -6,12 +6,12 @@
  * Statement of code ownership: I hereby state that I have written all of this
  * code and I have not copied this code from any other person or source.
  * 
- * @author [YOUR INFORMATION GOES HERE]
+ * @author [Romina Sobhani, rsobhani@pipeline.sbcc.edu]
  */
 package edu.sbcc.cs105;
 
 /**
- * This code is a solution for the Streams assignment.
+ * This code is a solution for the point assignment.
  *
  */
 public class Point {
@@ -39,10 +39,12 @@ public class Point {
 
 	public void translateX(double dx) {
 		// Put your code here to translate (addition) _x by dx
+		 _x= getX()+ dx;
 	}
 
 	public void translateY(double dy) {
 		// Put your code here to translate (addition) _y by dy
+		_y= getY()+dy;
 	}
 
 	public void scale(double sx, double sy) {
@@ -52,10 +54,13 @@ public class Point {
 
 	public void scaleX(double sx) {
 		// Put your code here to scale (multiply) _x by sx
+		_x= getX()* sx;
+
 	}
 
 	public void scaleY(double sy) {
 		// Put your code here to scale (multiply) _y by sy
+		_y=getY()*sy;
 	}
 
 
@@ -64,7 +69,7 @@ public class Point {
 		double y = p.getY() - getY();
 
 		// Change the 0.0 below to the distance formula Math.sqrt(x * x + y * y)
-		double distance = 0.0;
+		double distance = Math.sqrt(x*x + y*y);
 		return distance;
 	}
 
